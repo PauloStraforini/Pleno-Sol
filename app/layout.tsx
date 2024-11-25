@@ -3,7 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/next-themes";
 import { ModeToggle } from "@/components/ui/dark-mode";
-import { Home } from "./dash";
+import { Home } from "./pages/dashboard";
+import FirsPage from "./pages/first_page";
 
 
 const geistSans = localFont({
@@ -33,7 +34,7 @@ export default function RootLayout({
     <body>
 
       <ThemeProvider attribute="class">
-        <Home/>
+        <FirsPage/> 
       </ThemeProvider>
       
 
