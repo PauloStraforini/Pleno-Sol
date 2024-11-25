@@ -28,9 +28,10 @@ const chartData = [
 const chartConfig = {
   visitors: {
     label: "Energia (kWh)",
+    color: "white",
   },
   chrome: {
-    label: "Jan",
+    label: "Jan" ,
     color: "hsl(var(--chart-1))",
   },
   safari: {
@@ -67,7 +68,7 @@ export function Pizza_Charts() {
             <ChartTooltip
               content={<ChartTooltipContent nameKey="visitors" hideLabel />}
             />
-            <Pie data={chartData} dataKey="visitors">
+            <Pie data={chartData} dataKey="visitors" >
               <LabelList
                 dataKey="browser"
                 className="fill-background"
