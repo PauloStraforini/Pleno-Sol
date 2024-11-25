@@ -17,8 +17,10 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
+
 const chartData = [
-  { month: "January", desktop: 186 },
+  { month: "January", desktop: 186 }, 
   { month: "February", desktop: 305 },
   { month: "March", desktop: 237 },
   { month: "April", desktop: 73 },
@@ -28,17 +30,17 @@ const chartData = [
 
 const chartConfig = {
   desktop: {
-    label: "Desktop",
+    label: "Consumo:(kWh)",
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
 
 export function Component() {
   return (
-    <Card>
+    <Card className="w-[100%] ">
       <CardHeader className="">
-        <CardTitle>Bar Chart - Label</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Consumo Mensal de Energia</CardTitle>
+        <CardDescription>Janeiro - Junho 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -74,12 +76,12 @@ export function Component() {
       </CardContent>
       <CardFooter className="flex-col items-center gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Aumento dos gastos de 5.2% neste mês <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          Mostrando o total de consumo nos últimos 6 meses
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
