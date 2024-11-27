@@ -2,7 +2,7 @@ import { Component,  } from "@/components/charts/bar_charts_mult"
 import { Big_Chart } from "@/components/charts/big_chart"
 import { Pie_Charts } from "@/components/charts/line_charts"
 import { Pizza_Charts } from "@/components/charts/pizza_chats"
-import { AppSidebar } from "@/components/ui/app-sidebar"
+
 import {
   Breadcrumb,
   BreadcrumbItem,
