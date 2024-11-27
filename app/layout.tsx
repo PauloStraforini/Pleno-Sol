@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/next-themes";
-import { ModeToggle } from "@/components/ui/dark-mode";
+
 import { Dash } from "./pages/dashboard";
 import FirsPage from "./pages/first_page";
+
 
 
 const geistSans = localFont({
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  
 }: Readonly<{
   children: React.ReactNode;
 }>) {
