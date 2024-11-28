@@ -7,6 +7,9 @@ import painel02 from "@/components/img/painel02.jpg";
 import painel03 from "@/components/img/painel03.jpg";
 import sun2 from "@/components/img/sun2.png";
 import Link from "next/link";
+import { Pagina_Dash } from "./pages/dashboard";
+
+
 
 
 export default function FirsPage() {
@@ -44,12 +47,15 @@ export default function FirsPage() {
                 Simples, eficiente e sustentável. 🌞
               </p>
 
-
-              <Link href="/Pagina_Dash">
-        <Button className="mt-8 bg-green-700 text-white hover:bg-green-600">
-          Venha com a gente
-        </Button>
-      </Link>
+              <Link href="/dashboard">Dashboard
+                
+                  <Button className="mt-8 bg-green-700 text-white hover:bg-green-600">
+                    Venha com a gente
+                  </Button>
+                
+              </Link>
+  
+      
 
               
             </div>
