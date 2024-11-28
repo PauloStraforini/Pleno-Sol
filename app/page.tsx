@@ -47,7 +47,7 @@ export default function FirsPage() {
                 Simples, eficiente e sustentável. 🌞
               </p>
 
-              <Link href="/dashboard">Dashboard
+              <Link href="/dashboard">
                 
                   <Button className="mt-8 bg-green-700 text-white hover:bg-green-600">
                     Venha com a gente

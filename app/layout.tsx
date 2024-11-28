@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/next-themes";
 import FirsPage from "./page";
 import { Pagina_Dash } from "./pages/dashboard";
+import SignUpPage from "./pages/singUp";
 
 // Fontes locais
 const geistSans = localFont({
@@ -34,8 +35,11 @@ export default function RootLayout({
       <head />
       <body>
         <ThemeProvider attribute="class">
+          
           {/* Renderiza o conteúdo passado como children */}
           <FirsPage/>
+          <SignUpPage/>
+          <Pagina_Dash/>
 
         </ThemeProvider>
       </body>
