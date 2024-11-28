@@ -3,6 +3,7 @@ import { Big_Chart } from "@/components/charts/big_chart"
 import { Pie_Charts } from "@/components/charts/line_charts"
 import { Pizza_Charts } from "@/components/charts/pizza_chats"
 
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,7 +19,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 
-export function Dash() {
+export function Pagina_Dash() {
   return (
     
     

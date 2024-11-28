@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/next-themes";
+import FirsPage from "./page";
+import { Pagina_Dash } from "./pages/dashboard";
 
-import { Dash } from "./pages/dashboard";
-import FirsPage from "./pages/first_page";
+
 
 
 
@@ -25,19 +26,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  
+
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-br" suppressHydrationWarning>
     <head />
     <body>
 
       <ThemeProvider attribute="class">
-        <FirsPage/>  
-        <Dash/>
-        
+        <FirsPage/>
+        <Pagina_Dash/>
       </ThemeProvider>
       
 

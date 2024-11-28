@@ -1,22 +1,27 @@
-import { Phone } from 'lucide-react'
-import Image from "next/image"
+import { Phone } from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import painel01 from "@/components/img/painel01.jpg";
+import painel02 from "@/components/img/painel02.jpg";
+import painel03 from "@/components/img/painel03.jpg";
+import sun2 from "@/components/img/sun2.png";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 
-export default function Component() {
+export default function FirsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
       <header className="border-b">
         <div className="container mx-auto flex items-center justify-between p-4">
-          <h1 className="text-xl font-bold tracking-tight">SOLAR ENERGY</h1>
+          <h1 className="text-xl font-bold tracking-tight">Pleno Sol</h1>
           <a
             href="tel:866-330-3260"
-            className="flex items-center gap-2 text-lime-600 hover:text-lime-700"
+            className="flex items-center gap-2 text-white hover:text-zinc-500"
           >
             <Phone className="h-4 w-4" />
-            Call: 866-330-3260
+            Ligue: (15) 998327410
           </a>
         </div>
       </header>
@@ -28,48 +33,58 @@ export default function Component() {
           <div className="flex items-center justify-between">
             <div className="max-w-2xl text-white">
               <h2 className="text-5xl font-bold leading-tight">
-                ARE YOU READY
+                Voce está pronto
                 <br />
-                TO
+                Para
                 <br />
-                GO SOLAR?
+                O futuro?
               </h2>
               <p className="mt-4 text-lg">
-                We make the process as easy as possible taking care of the design,
-                permitting, installation, monitoring, rebates, and financing
+                Monitore, maximize eficiência e receba alertas inteligentes.
+                Simples, eficiente e sustentável. 🌞
               </p>
-              <Button className="mt-8 bg-lime-500 text-white hover:bg-lime-600">
-                GET A FREE QUOTE
-              </Button>
+
+
+              <Link href="/Pagina_Dash">
+        <Button className="mt-8 bg-green-700 text-white hover:bg-green-600">
+          Venha com a gente
+        </Button>
+      </Link>
+
+              
             </div>
             <div className="hidden lg:block">
-              <svg
-                className="h-32 w-32 text-white"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 7a5 5 0 100 10 5 5 0 000-10zM12 15a3 3 0 110-6 3 3 0 010 6z" />
-                <path d="M12 5V3M12 21v-2M5 12H3M21 12h-2M7.05 7.05L5.63 5.63M18.37 18.37l-1.42-1.42M7.05 16.95l-1.42 1.42M18.37 5.63l-1.42 1.42" />
-              </svg>
+              <div className="flex justify-center lg:justify-end w-full">
+                <Image
+                  src={sun2}
+                  alt="Imagem de um cachorro"
+                  width={500}
+                  height={900}
+                  className="transform -translate-y-10"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-lime-500 py-12 text-white">
+      <section className="bg-green-700 py-12 text-white">
         <div className="container mx-auto grid grid-cols-1 gap-8 px-4 text-center md:grid-cols-3">
           <div>
-            <div className="text-4xl font-bold">100MW</div>
-            <div className="mt-2">Installed and Under Development</div>
+            <div className="text-4xl font-bold">20M</div>
+            <div className="mt-2">Aparelhos Instalados!</div>
           </div>
           <div>
-            <div className="text-4xl font-bold">50</div>
-            <div className="mt-2">US States and Countries Served</div>
+            <div className="text-4xl font-bold">8 Estados</div>
+            <div className="mt-2">Presente nos Estados Brasileiros </div>
           </div>
           <div>
-            <div className="text-4xl font-bold">10000</div>
-            <div className="mt-2">Solar Orders Delivered to Installers</div>
+            <div className="text-4xl font-bold">THE BEST !!! </div>
+            <div className="mt-2">
+              Melhor Compania de Energia Solar do{" "}
+              <span className="font-semibold"> Brasil ! </span>
+            </div>
           </div>
         </div>
       </section>
@@ -78,33 +93,33 @@ export default function Component() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold">
-            EXPERTLY INSTALLED SOLAR ENERGY
+            SISTEMAS DE PAINÉIS SOLARES INSTALADOS POR ESPECIALISTAS
             <br />
-            PANEL SYSTEMS FOR BUSINESSES, FARMS, AND HOMES
+            PARA EMPRESAS, FAZENDAS E RESIDÊNCIAS
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                title: "HOMES",
-                image: "/placeholder.svg?height=300&width=400",
+                title: "Instalações Residenciais de Energia Solar 🌞",
+                image: painel01,
                 description:
-                  "There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour.",
+                  "Transforme sua casa com energia solar! Cuidamos do projeto, instalação e monitoramento, garantindo eficiência.",
               },
               {
-                title: "BUSINESSES",
-                image: "/placeholder.svg?height=300&width=400",
+                title: "Instalações Comerciais de Energia Solar 🌞",
+                image: painel02,
                 description:
-                  "There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour.",
+                  "Impulsione sua empresa com energia solar! Soluções completas, desde o projeto até a instalação e monitoramento.",
               },
               {
-                title: "FARMS",
-                image: "/placeholder.svg?height=300&width=400",
+                title: "Instalações de Energia Solar para Condomínios 🌞",
+                image: painel03,
                 description:
-                  "There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour.",
+                  "Soluções solares completas para condomínios! Proporcionando economia e sustentabilidade para todos.",
               },
             ].map((service) => (
               <Card key={service.title}>
-                <CardContent className="p-0">
+                <CardContent className="p-0 bg-green-700">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -113,12 +128,13 @@ export default function Component() {
                     className="h-48 w-full object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="mb-4 text-center text-xl font-bold text-lime-500">
+                    <h3 className="mb-4 text-center text-xl font-bold text-white">
                       {service.title}
                     </h3>
-                    <p className="text-center text-gray-600">
+                    <p className="text-center text-white">
                       {service.description}
                     </p>
+                    
                   </div>
                 </CardContent>
               </Card>
@@ -128,18 +144,23 @@ export default function Component() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-lime-500 py-16 text-white">
-        <div className="container mx-auto grid gap-8 px-4 md:grid-cols-2">
+      <section className="bg-green-700 py-16 text-white">
+        <div className="container mx-auto grid gap-8 px-4 md:grid-cols-3">
           {[
             {
               quote:
-                "All the Lorem Ipsum generator on the Internet to repeat predefined chunks as necessary, making this the first true generator on with a handful of model sentence of lorem.",
-              author: "JOHN SMITH",
+                "O PlenoSol transformou a forma como acompanho minha energia solar.",
+              author: "Christian",
             },
             {
               quote:
-                "All the Lorem Ipsum generator on the Internet to repeat predefined chunks as necessary, making this the first true generator on with a handful of model sentence of lorem.",
-              author: "KEVIN HALL",
+                "Conseguimos monitorar todos os nossos sistemas de energia solar em tempo real.",
+              author: "Paulo (CTO - Scania)",
+            },
+            {
+              quote:
+                "Usar o PlenoSol foi um divisor de águas para nossa empresa.",
+              author: "Andrade",
             },
           ].map((testimonial) => (
             <div key={testimonial.author} className="text-center">
@@ -154,24 +175,25 @@ export default function Component() {
       <section className="relative bg-[url('/placeholder.svg?height=400&width=1200')] bg-cover bg-center py-24">
         <div className="absolute inset-0 bg-black/60" />
         <div className="container relative mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold">ARE YOU READY TO GO SOLAR?</h2>
+          <h2 className="text-4xl font-bold">Voce está pronto para futuro?</h2>
           <p className="mx-auto mt-4 max-w-2xl">
-            We make the process as easy as possible taking care of the design,
-            permitting, installation, monitoring, rebates, and financing.
+            Cuidamos do design, monitoramento, geração de relatórios, alertas de
+            manutenção e otimização do desempenho do seu sistema solar.
           </p>
-          <Button className="mt-8 bg-lime-500 text-white hover:bg-lime-600">
-            GET A FREE QUOTE
-          </Button>
+
+          <a href="/dashboard">
+            <Button className="mt-8 bg-green-700 text-white hover:bg-green-600">
+              Venha com a gente
+            </Button>
+          </a>
+          
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-4 text-center text-sm text-gray-600">
-        <p>
-          Copyright © domainname.com. All Rights Reserved | Designed by:
-          buylandingpagedesign.com
-        </p>
+      <footer className="border-t py-4 text-center text-sm text-zinc-400">
+        <p>Copyright © PlenoSol.com.</p>
       </footer>
     </div>
-  )
+  );
 }
